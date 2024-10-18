@@ -4,6 +4,7 @@ import com.example.demo.entity.Topic;
 import com.example.demo.service.XmindService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
+import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -23,7 +24,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/xmind")
 public class XmindController {
-    @Autowired
+    @Resource
     private XmindService xmindService;
 
     @PostMapping("/upload")
